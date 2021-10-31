@@ -6,7 +6,7 @@ inquirer
         {
             type: 'input',
             message: 'What is the title of your project?',
-            name: 'title',
+            name: 'projectName',
         },
         {
             type: 'input',
@@ -31,7 +31,7 @@ inquirer
         {
             type: 'input',
             message: 'If applicable, please provide testing related information',
-            name: 'testing',
+            name: 'test',
         },
         {
             type: 'list',
@@ -40,3 +40,32 @@ inquirer
             name: 'license'
         }
     ])
+
+    .then((response) => 
+    fs.writeFile(`${response.name}.md`, generateREADME(response), 'utf-8', function(){
+        console.log('successfully wrote file')
+    })
+  );
+
+const generateREADME = ({projectName,description,installation,usage,contributing,tests}) =>
+`# ${projectName}
+## Description
+${description}
+## Table of Contents 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [How to Contribute](#how-to-contribute)
+- [Tests](#tests)
+## Installation
+${installation}
+## Usage
+${usage}
+## License
+MIT License
+## How to Contribute
+${contributing}
+## Tests
+${tests}
+`
