@@ -1,10 +1,10 @@
-# ReadMe generator
+# README_Gen
 ## Description
-We wanted to create a project that will help us create readme files for out projects
-We were tired of creating a read me from scratch on every project
-To easily create README files without ever leaving our console
-We no longer need to create a README from scratch 
-I learned how to create files with FS and how to take a user's input and use those inputs to create the responses in the file
+Creating a prompt to create an markdown file in nodeJS
+-To help the process of creating readme files
+-So I no longer have to copy and paste the basic template for a README for every project
+-Time restraints with creating readme files
+-I learned how to apply prompts to a given template in nodeJS
 ## Table of Contents 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -15,10 +15,13 @@ I learned how to create files with FS and how to take a user's input and use tho
 ## Installation
 N/A
 ## Usage
-Open integrated terminal, answer the prompts and watch the README get created
+Use integrated terminal in Visual studios to create your readme
 ## License
 MIT License
 ## How to Contribute
 N/A
 ## Tests
-N/A
+Test in integrated terminal 
+##Questions
+AntonioM4
+marino.antonio04@gmail.com

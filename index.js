@@ -34,31 +34,41 @@ inquirer
           name: 'learn',
         },
         {
-            type: 'input',
-            message: 'If applicable, please enter installation instructions.',
-            name: 'installation',
+          type: 'input',
+          message: 'If applicable, please enter installation instructions.',
+          name: 'installation',
         },
         {
-            type: 'input',
-            message: 'Provide instructions and examples of your project in use for the Usage section.',
-            name: 'usage',
+          type: 'input',
+          message: 'Provide instructions and examples of your project in use for the Usage section.',
+          name: 'usage',
         },
         {
-            type: 'input',
-            message: 'How to contribute?',
-            name: 'contributing',
+          type: 'input',
+          message: 'How to contribute?',
+          name: 'contributing',
         },
         {
-            type: 'input',
-            message: 'If applicable, please provide testing related information',
-            name: 'test',
+          type: 'input',
+          message: 'If applicable, please provide testing related information',
+          name: 'test',
         },
         {
-            type: 'list',
-            message: "Choose a license for your project.",
-            choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
-            name: 'license'
-        }
+          type: 'list',
+          message: "Choose a license for your project.",
+          choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+          name: 'license'
+        },
+        {
+          type: 'input',
+          message: 'Please enter your Github username.',
+          name: 'gitUser'
+        },
+        {
+          type: 'input',
+          message: 'Please enter your email address.',
+          name: 'email'
+        },
     ])
 
     .then((response) => 
@@ -67,13 +77,17 @@ inquirer
     })
   );
 
-const generateREADME = ({projectName,description,motive,why,problem,learn,license,installation,usage,contributing,test,}) =>
+const generateREADME = ({projectName,description,motive,why,problem,learn,license,installation,usage,contributing,test,gitUser,email}) =>
 `# ${projectName}
 ## Description
 ${description}
+-\
 ${motive}
+-\
 ${why}
+-\
 ${problem}
+-\
 ${learn}
 ## Table of Contents 
 - [Installation](#installation)
@@ -92,4 +106,7 @@ ${license}
 ${contributing}
 ## Tests
 ${test}
+##Questions
+${gitUser}
+${email}
 `
