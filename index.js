@@ -25,8 +25,8 @@ inquirer
         },
         {
             type: 'input',
-            message: 'If applicable, please enter guidelines for other developers wishing to contribute to your project',
-            name: 'guidelines',
+            message: 'How to contribute?',
+            name: 'contributing',
         },
         {
             type: 'input',
@@ -47,7 +47,7 @@ inquirer
     })
   );
 
-const generateREADME = ({projectName,description,installation,usage,contributing,tests}) =>
+const generateREADME = ({projectName,description,installation,usage,contributing,test,license}) =>
 `# ${projectName}
 ## Description
 ${description}
@@ -63,9 +63,9 @@ ${installation}
 ## Usage
 ${usage}
 ## License
-MIT License
+${license}
 ## How to Contribute
 ${contributing}
 ## Tests
-${tests}
+${test}
 `
