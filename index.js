@@ -14,6 +14,26 @@ inquirer
             name: 'description',
         },
         {
+          type: 'input',
+          message: 'What was your motivation?',
+          name: 'motive',
+        },
+        {
+          type: 'input',
+          message: 'Why did you build this project?',
+          name: 'why',
+        },
+        {
+          type: 'input',
+          message: 'What problem does it solve?',
+          name: 'problem',
+        },
+        {
+          type: 'input',
+          message: 'What did you learn?',
+          name: 'learn',
+        },
+        {
             type: 'input',
             message: 'If applicable, please enter installation instructions.',
             name: 'installation',
@@ -47,10 +67,14 @@ inquirer
     })
   );
 
-const generateREADME = ({projectName,description,installation,usage,contributing,test,license}) =>
+const generateREADME = ({projectName,description,motive,why,problem,learn,license,installation,usage,contributing,test,}) =>
 `# ${projectName}
 ## Description
 ${description}
+${motive}
+${why}
+${problem}
+${learn}
 ## Table of Contents 
 - [Installation](#installation)
 - [Usage](#usage)

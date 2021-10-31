@@ -1,6 +1,10 @@
-# README_Gen
+# ReadMe generator
 ## Description
-We wanted to create a readme template to run in javascript and create a markdown file we could use as a readme 
+We wanted to create a project that will help us create readme files for out projects
+We were tired of creating a read me from scratch on every project
+To easily create README files without ever leaving our console
+We no longer need to create a README from scratch 
+I learned how to create files with FS and how to take a user's input and use those inputs to create the responses in the file
 ## Table of Contents 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -9,12 +13,12 @@ We wanted to create a readme template to run in javascript and create a markdown
 - [How to Contribute](#how-to-contribute)
 - [Tests](#tests)
 ## Installation
-NA
+N/A
 ## Usage
-create readme files withouth leaving your terminal
+Open integrated terminal, answer the prompts and watch the README get created
 ## License
 MIT License
 ## How to Contribute
-na
+N/A
 ## Tests
-run the program in your intigrated console and answer the prompts to creat a markdown file
+N/A
