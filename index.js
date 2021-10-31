@@ -61,7 +61,7 @@ inquirer
         },
         {
           type: 'input',
-          message: 'Please enter your Github username.',
+          message: 'Please enter your Github username',
           name: 'gitUser'
         },
         {
@@ -106,7 +106,7 @@ ${license}
 ${contributing}
 ## Tests
 ${test}
-##Questions
+## Questions
 ${gitUser}
 ${email}
 `
